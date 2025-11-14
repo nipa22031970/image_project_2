@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Сервер зображень</title>
+  <link rel="stylesheet" href="css/upload.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Сервер зображень</h1>
+    <p class="subtitle">.jpg, .png, .gif | Максимум 5 МБ</p>
+
+    <!-- === РАМКА З ЧОРНОЮ ОБВОДКОЮ ТЕКСТУ === -->
+    <div class="upload-frame" id="dropArea">
+      <div class="text-box">
+        <p><strong>Перетягніть файл сюди</strong><br>або натисніть, щоб обрати</p>
+      </div>
+    </div>
+
+    <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.gif" hidden />
+    
+    <!-- Результат -->
+    <div class="result" id="resultBox" style="display:none;">
+      <input type="text" id="resultLink" readonly placeholder="Посилання з'явиться тут..." />
+      <button id="copyBtn">КОПІЮВАТИ</button>
+    </div>
+
+    <!-- Список зображень -->
+    <div id="imagesList" style="margin-top: 30px;"></div>
+  </div>
+
+  <script src="js/upload.js" defer></script>
+</body>
+</html>
